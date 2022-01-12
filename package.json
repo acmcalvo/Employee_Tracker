@@ -20,5 +20,10 @@
   "homepage": "https://github.com/acmcalvo/Employee_Tracker#readme",
   "devDependencies": {
     "jest": "^27.4.7"
+  },
+  "dependencies": {
+    "dotenv": "^11.0.0",
+    "inquirer": "^8.2.0",
+    "mysql2": "^2.3.3"
   }
 }
