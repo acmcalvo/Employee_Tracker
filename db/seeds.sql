@@ -5,18 +5,18 @@ VALUES
 ('Art Deparment'),
 ('IT'),
 
-INSERT INTO role (title, salary, department_id)
+INSERT INTO role (department_id, title, salary,)
 VALUES
-('Manager', 120000, 1),
-('Admin Office', 100000, 1),
-('Costumer Service 1', 40000, 2 ),
-('Costumer Service 2', 40000, 2 ),
-('Graphics 1', 45000, 3),
-('Graphics 2', 45000, 3),
-('Software Enginner', 120000, 4),
-('Full Stack Web Developer', 85000, 4),
+(1, 'Manager', 120000),
+(1, 'Admin Office', 100000),
+(2, 'Costumer Service 1', 40000),
+(2, 'Costumer Service 2', 40000),
+(3, 'Graphics 1', 45000),
+(3, 'Graphics 2', 45000),
+(4, 'Software Enginner', 120000),
+(4, 'Full Stack Web Developer', 85000),
 
-INSERT INTO employee (first_name, last_name, role_id, manager_id)
+INSERT INTO employee (first_name, last_name, role_id)
 VALUES 
 ('Chuck', 'OB', 1, 1),
 ('Sue', 'P', 2,  1),
