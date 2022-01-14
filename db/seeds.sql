@@ -5,7 +5,7 @@ VALUES
 ('Art Deparment'),
 ('IT'),
 
-INSERT INTO role (department_id, title, salary,)
+INSERT INTO role (department_id, title, salary)
 VALUES
 (1, 'Manager', 120000),
 (1, 'Admin Office', 100000),
@@ -16,14 +16,14 @@ VALUES
 (4, 'Software Enginner', 120000),
 (4, 'Full Stack Web Developer', 85000),
 
-INSERT INTO employee (first_name, last_name, role_id)
+INSERT INTO employee (role_id, first_name, last_name)
 VALUES 
-('Chuck', 'OB', 1, 1),
-('Sue', 'P', 2,  1),
-('Sue', 'OB', 3,  NULL),
-('Rain', 'D', 4,  NULL),
-('Bernie', 'A', 5,  NULL),
-('Jessica', 'K', 6,  NULL),
-('Kevin', 'S', 7,  NULL),
-('Asley', 'M', 8,  NULL),
+(1, 1,'Chuck', 'OB'),
+(2,  1,'Sue', 'P',),
+(3,  NULL, 'Sue', 'OB'),
+(4,  NULL, 'Rain', 'D'),
+(5,  NULL, 'Bernie', 'A'),
+(6,  NULL, 'Jessica', 'K'),
+(7,  NULL, 'Kevin', 'S'),
+(8,  NULL, 'Asley', 'M'),
 
