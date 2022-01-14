@@ -16,7 +16,7 @@ VALUES
 (4, 'Software Enginner', 120000),
 (4, 'Full Stack Web Developer', 85000),
 
-INSERT INTO employee (role_id, first_name, last_name)
+INSERT INTO employee (role_id, manager_id, first_name, last_name)
 VALUES 
 (1, 1,'Chuck', 'OB'),
 (2,  1,'Sue', 'P',),
