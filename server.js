@@ -1,8 +1,8 @@
-const mysql = require("mysql2");
+const mysql = require('mysql2');
 
-const inquirer = require("inquirer");
+const inquirer = require('inquirer');
 
-const cTable = require("console.table");
+const cTable = require('console.table');
 
 require("dotenv").config();
 
