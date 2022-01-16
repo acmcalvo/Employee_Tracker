@@ -11,16 +11,18 @@ const connection = mysql.createConnection({
   password: process.env.MYSQL_PASSWORD,
   database: 'employee_db',
 });
+
 connection.connect(function (err) {
   if (err) throw err;
   console.log("connected as id " + connection.threadId);
-  console.log("***********************************");
+  console.log("___________________________________");
   console.log("*                                 *");
   console.log("*        EMPLOYEE MANAGER         *");
-  console.log("*                                 *");
-  console.log("***********************************");
-
-  firstPrompt();
+  console.log("*   CONTENT MANAGEMENT SYSTEMS    *");
+  console.log("*               CMS               *");
+  console.log("___________________________________");
+  console.log(" ");
+firstPrompt();
 });
 
 //prompts the user for what action they should take
@@ -224,7 +226,7 @@ function promptInsert(roleChoices) {
     });
 }
 
-//"Remove Employees" / DELETE, DELETE FROM
+//Delete Employees 
 function removeEmployees() {
   console.log("Deleting an employee");
 
@@ -246,7 +248,7 @@ function removeEmployees() {
   });
 }
 
-// User choose the employee list, then employee is deleted
+// Prompt Delete and ask a quit
 function promptDelete(deleteEmployeeChoices) {
   inquirer
     .prompt([
@@ -373,14 +375,14 @@ function addRole() {
   connection.query(query, function (err, res) {
     if (err) throw err;
 
-    // (callbackfn: (value: T, index: number, array: readonly T[]) => U, thisArg?: any)
+    // callback function
     const departmentChoices = res.map(({ id, name }) => ({
       value: id,
       name: `${id} ${name}`,
     }));
 
     console.table(res);
-    console.log("Department array!");
+    console.log("All Department array!");
 
     promptAddRole(departmentChoices);
   });
