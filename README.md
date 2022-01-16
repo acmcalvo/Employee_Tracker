@@ -22,7 +22,8 @@ Our assignment this week is to build a command-line application from scratch to 
   
   
   
-  If you have trouble watching the demo video, please use this link:
+  If you have trouble watching the demo video, please use this link: \n
+  https://watch.screencastify.com/v/inpK44yi0wDpn6zgBfrO
 
   
   ## Technologies Used
@@ -45,6 +46,8 @@ Our assignment this week is to build a command-line application from scratch to 
 
 
   ## Repository
+  
+  Github: https://github.com/acmcalvo/Employee_Tracker.git
   
   
 
