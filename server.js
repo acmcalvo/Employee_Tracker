@@ -98,29 +98,37 @@ function viewEmployee() {
 }
 
 //View Employee By Department
-function viewEmployeeByDepartment() {
-  console.log("Viewing employees by department...\n");
+// function viewEmployeeByDepartment() {
+//   console.log("Viewing employees by department...\n");
 
-  let query = `SELECT d.id, d.name, r.salary AS budget
-  FROM employee e
-  LEFT JOIN role r
-	ON e.role_id = r.id
-  LEFT JOIN department d
-  ON d.id = r.department_id
-  GROUP BY d.id, d.name`;
+//   let query = `SELECT d.id, d.name, r.salary AS budget
+//   FROM employee e
+//   LEFT JOIN role r
+// 	ON e.role_id = r.id
+//   LEFT JOIN department d
+//   ON d.id = r.department_id
+//   GROUP BY d.id, d.name`;
 
+//   connection.query(query, function (err, res) {
+//     if (err) throw err;
+
+//     const departmentChoices = res.map((data) => ({
+//       value: data.id,
+//       name: data.name,
+//     }));
+
+//     console.table(res);
+//     console.log("Department view succeed!\n");
+
+//     promptDepartment(departmentChoices);
+//   });
+// }
+
+function viewAllDept() {
+  var query = "SELECT * FROM department"
   connection.query(query, function (err, res) {
-    if (err) throw err;
-
-    const departmentChoices = res.map((data) => ({
-      value: data.id,
-      name: data.name,
-    }));
-
     console.table(res);
-    console.log("Department view succeed!\n");
-
-    promptDepartment(departmentChoices);
+    mainMenu();
   });
 }
 
@@ -204,6 +212,8 @@ function promptInsert(roleChoices) {
       console.log(answer);
 
       let query = `INSERT INTO employee SET ?`;
+
+
       // when finished prompting, insert a new item into the db with that info
       connection.query(
         query,
