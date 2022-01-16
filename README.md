@@ -25,28 +25,23 @@ Our assignment this week is to build a command-line application from scratch to 
   If you have trouble watching the demo video, please use this link:
 
   
-  ## Installation
+  ## Technologies Used
   
+  * npm 
+  * npm inquirer
+  * npm console.table
+  * npm dotenv to store environmental variables.
+  * npm i mysql2
 
+   ## Installation
+   
+   * run command npm start
 
-npm i to install your NPM package manager and required dependencies.
+  * select an option from the menu prompt
 
-npm i inquirer to interact with the user via the command-line.
-
-npm i console.table to print MySQL rows to the console.
-
-npm i dotenv to store environmental variables.
-
-npm i mysql2 to connect to your MySQL database and perform queries.
-
-run command mysql -u -root -p to initilize MySQL, then type username and password to login:
-
-type mysql> status to confirm connection with database.
-
-run command node server or nmp start.
-
- 	https://github.com/teamjuli0/readme-badges/blob/main/themes/clean-light/menu-categories/installing.png?raw=true
+  * follow the prompts for each selection.
   
+  * Select Exit Menu to quit.
 
 
   ## Repository
