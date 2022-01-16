@@ -1,15 +1,15 @@
-const mysql = require("mysql2");
-const inquirer = require("inquirer");
-const cTable = require("console.table");
+const mysql = require('mysql2');
+const inquirer = require('inquirer');
+const cTable = require('console.table');
 
-require("dotenv").config();
+require('dotenv').config();
 
 // connection to database
 const connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
+  host: 'localhost',
+  user: 'root',
   password: process.env.MYSQL_PASSWORD,
-  database: "employee_db",
+  database: 'employee_db',
 });
 connection.connect(function (err) {
   if (err) throw err;
@@ -19,20 +19,20 @@ connection.connect(function (err) {
   console.log("*        EMPLOYEE MANAGER         *");
   console.log("*                                 *");
   console.log("***********************************");
-  // runs the app
+
   firstPrompt();
 });
 
-// function which prompts the user for what action they should take
+//prompts the user for what action they should take
 function firstPrompt() {
   inquirer
     .prompt({
       type: "list",
       name: "task",
-      message: "Would you like to do?",
+      message: "Would you like to do? ",
       choices: [
-        "View Employees",
-        "View Employees by Department",
+        "View All Employees",
+        "View All Department",
         "Add Employee",
         "Remove Employees",
         "Update Employee Role",
@@ -42,11 +42,11 @@ function firstPrompt() {
     })
     .then(function ({ task }) {
       switch (task) {
-        case "View Employees":
+        case "View All Employees":
           viewEmployee();
           break;
 
-        case "View Employees by Department":
+        case "View All Department":
           viewEmployeeByDepartment();
           break;
 
@@ -66,7 +66,7 @@ function firstPrompt() {
           addRole();
           break;
 
-        case "End":
+        case "Exit":
           connection.end();
           break;
       }
@@ -96,11 +96,11 @@ function viewEmployee() {
   });
 }
 
-//View Employee By Department
+//View All Department
 function viewEmployeeByDepartment() {
-  console.log("Viewing employees by department...\n");
+  console.log("Viewing All Department...\n");
 
-  let query = `SELECT d.id, d.name, r.salary AS budget
+  let query = `SELECT d.id, d.name, r.salary AS Salary
   FROM employee e
   LEFT JOIN role r
 	ON e.role_id = r.id
@@ -123,9 +123,7 @@ function viewEmployeeByDepartment() {
   });
 }
 
-
-
-// User choose the department list, then employees pop up
+// choose the department list
 function promptDepartment(departmentChoices) {
   inquirer
     .prompt([
@@ -151,14 +149,14 @@ function promptDepartment(departmentChoices) {
         if (err) throw err;
 
         console.table("response ", res);
-        console.log(res.affectedRows + "Employees are viewed!\n");
+        console.log("Employees are viewed!\n");
 
         firstPrompt();
       });
     });
 }
 
-// Make a employee array
+// Add Employee Array
 function addEmployee() {
   console.log("Inserting an employee!");
 
@@ -227,7 +225,6 @@ function promptInsert(roleChoices) {
 }
 
 //"Remove Employees" / DELETE, DELETE FROM
-// Make a employee array to delete
 function removeEmployees() {
   console.log("Deleting an employee");
 
