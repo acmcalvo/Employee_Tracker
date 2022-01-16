@@ -45,11 +45,9 @@ Our assignment this week is to build a command-line application from scratch to 
 
 
   ## Repository
-  https://github.com/acmcalvo/Note-Taker.git
   
-  and link to Heroku:
-  https://note-taker-acm.herokuapp.com/
   
+
   ## License 
   This project is license under MIT License
 
