@@ -39,7 +39,7 @@ function firstPrompt() {
         "Remove Employees",
         "Update Employee Role",
         "Add Role",
-        "End",
+        "Exit",
       ],
     })
     .then(function ({ task }) {
