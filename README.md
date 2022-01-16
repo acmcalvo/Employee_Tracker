@@ -45,7 +45,7 @@ type mysql> status to confirm connection with database.
 
 run command node server or nmp start.
 
- ## Installation
+ 	https://github.com/teamjuli0/readme-badges/blob/main/themes/clean-light/menu-categories/installing.png?raw=true
   
 
 
