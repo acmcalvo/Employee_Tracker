@@ -1,6 +1,7 @@
 const mysql = require('mysql2');
 const inquirer = require('inquirer');
 const cTable = require('console.table');
+const { DEC8_BIN } = require('mysql/lib/protocol/constants/charsets');
 
 require('dotenv').config();
 
@@ -428,4 +429,8 @@ function promptAddRole(departmentChoices) {
         }
       );
     });
+}
+function leaveDatabase(){
+  console.log('Goodbye')
+db.end();
 }
