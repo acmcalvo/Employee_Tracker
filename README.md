@@ -9,7 +9,7 @@
   * [Technologies Used](#technologiesUsed)
   * [Repository](#repository)
   * [License](#license)
-  * [Contributing](#contributing)
+  * [Issues](#issues)
 
   ## Description
   
@@ -54,10 +54,8 @@ Our assignment this week is to build a command-line application from scratch to 
   ## License 
   This project is license under MIT License
 
- 
- 
-  ## Contributing 
-  Contributions are welcome. If you want to make a major change, please open the issue page on Github. Thanks
+  ## Issues
+  Still working on add Departments. 
 
   ## Questions
   If you have any questions about this projects, please contact me directly at acmcalvo@yahoo.com. 
