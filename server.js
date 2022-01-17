@@ -1,9 +1,12 @@
 const mysql = require('mysql2');
 const inquirer = require('inquirer');
 const cTable = require('console.table');
-const { DEC8_BIN } = require('mysql/lib/protocol/constants/charsets');
+
 
 require('dotenv').config();
+
+
+
 
 // connection to database
 const connection = mysql.createConnection({
