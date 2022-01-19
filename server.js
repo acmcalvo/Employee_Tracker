@@ -37,8 +37,8 @@ const initialAction = async () => {
       message: "What would you like to do?",
       choices: [
         "View Employees",
-        "View Departments",
-        "View Roles",
+        "View All Departments",
+        "View All Roles",
         "Add Employees",
         "Add Departments",
         "Add Roles",
@@ -51,11 +51,11 @@ const initialAction = async () => {
         employeeView();
         break;
 
-      case "View Departments":
+      case "View All Departments":
         departmentView();
         break;
 
-      case "View Roles":
+      case "View All Roles":
         roleView();
         break;
 
