@@ -20,10 +20,10 @@ Our assignment this week is to build a command-line application from scratch to 
   
   ## Presentation
   
-  https://user-images.githubusercontent.com/91921941/149683267-4cb5f446-3ba7-408b-83cb-9d71bded074f.mp4
+https://user-images.githubusercontent.com/91921941/150061648-2bb6b800-15e2-4544-8766-46eaf2944afc.mp4
   
   If you have trouble watching the demo video, please use this link: 
-  https://watch.screencastify.com/v/inpK44yi0wDpn6zgBfrO
+ https://watch.screencastify.com/v/6qYw0FblosR9MdPN2Psf
 
   
   ## Technologies Used
