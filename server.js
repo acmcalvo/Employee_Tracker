@@ -48,15 +48,15 @@ const initialAction = async () => {
     });
     switch (answer.action) {
       case "View Employees":
-        employeeView();
+        viewEmployee();
         break;
 
       case "View All Departments":
-        departmentView();
+        viewDepartment();
         break;
 
       case "View All Roles":
-        roleView();
+        viewRole();
         break;
 
       case "Add Employees":
@@ -86,7 +86,7 @@ const initialAction = async () => {
 };
 
 // Selection to view all of the employees.
-const employeeView = async () => {
+const viewEmployee = async () => {
   console.log("Employee View");
   try {
     let query = "SELECT * FROM employee";
@@ -104,8 +104,8 @@ const employeeView = async () => {
 };
 
 // Selection to view all of the departments.
-const departmentView = async () => {
-  console.log("Department View");
+const viewDepartment = async () => {
+  console.log("View Department");
   try {
     let query = "SELECT * FROM department";
     connection.query(query, function (err, res) {
@@ -122,7 +122,7 @@ const departmentView = async () => {
 };
 
 // Selection to view all of the roles.
-const roleView = async () => {
+const viewRole = async () => {
   console.log("Role View");
   try {
     let query = "SELECT * FROM role";
